@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA ID Verifier</title>
+</head>
+<body>
+    <h1>South African ID Verifier</h1>
+    <form action="/verify_id" method="POST">
+        <label for="id_number">Enter South African ID Number:</label><br>
+        <input type="text" id="id_number" name="id_number" required><br><br>
+        <input type="submit" value="Verify ID">
+    </form>
+
+    {% if result is not none %}
+        <h2>{{ result }}</h2>
+    {% endif %}
+</body>
+</html>
