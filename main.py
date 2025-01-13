@@ -67,7 +67,7 @@ def validate_south_african_id(id_number):
         luhn_message = "Luhn check passed."
 
     # Return validation result including Luhn check status
-    return f"Valid ID: {gender}, {citizenship}. {luhn_message}"
+    return f"ID: {id_number} - Valid ID: {gender}, {citizenship}. {luhn_message}"
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
